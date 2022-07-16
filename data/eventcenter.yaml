@@ -1,0 +1,29 @@
+Searchdata:
+-
+  eventcode: 22004
+  eventname: 虚拟传感器触发
+  assert: True
+
+Eventstatus:
+-
+  status_assert: 停用
+-
+  status_assert: 启用
+
+Frequency:
+-
+  fre: 100
+
+FieldConfig:
+-
+  assertdata: 适用机型
+
+LauguageSearchdata:
+-
+  eventcode: 22005
+  eventname: 因处于勿扰模式，定时任务被自动取消
+  assert: In do not disturb mode,the scheduled task is cancelled
+-
+  eventcode: 220
+  eventname: 勿扰
+  assert: In do not disturb mode,the scheduled task is cancelled

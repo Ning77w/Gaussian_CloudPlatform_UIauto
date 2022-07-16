@@ -1,0 +1,14 @@
+-
+  username: superadmin
+  password: 123
+  assert: 高仙机器人管理平台
+
+-
+  username: superadmin
+  password: 123456
+  assert: GS-Application
+
+-
+  username: superadmin123
+  password: 123456
+  assert: GS-Application
