@@ -17,7 +17,7 @@ class Test_EventDefinition():
 		LoginPage(drivers).login(username, password)
 
 	@pytest.mark.usefixtures('Login')
-	@pytest.mark.parametrize('eventsearch_data',loadyaml('/Users/Administrator/PycharmProjects/Gaussian_CloudPlatform_UIauto/data/eventcenter.yaml', 'Searchdata'))
+	@pytest.mark.parametrize('eventsearch_data',loadyaml('/Users/gs/Desktop/GaussianUIauto/data/eventcenter.yaml', 'Searchdata'))
 	def test_EventSearch(self, drivers, eventsearch_data):
 		EventDefinition(drivers).OpenEventDefinition()
 		result = EventDefinition(drivers).SearchEventDefinition(eventsearch_data['eventcode'], eventsearch_data['eventname'])
@@ -27,16 +27,16 @@ class Test_EventDefinition():
 		result = EventDefinition(drivers).ClearSearchEventDefinition()
 		assert True == result
 
-	@pytest.mark.parametrize('status_data', loadyaml('/Users/Administrator/PycharmProjects/Gaussian_CloudPlatform_UIauto/data/eventcenter.yaml', 'Eventstatus'))
+	@pytest.mark.parametrize('status_data', loadyaml('/Users/gs/Desktop/GaussianUIauto/data/eventcenter.yaml', 'Eventstatus'))
 	def test_EditEvent(self, drivers, status_data):
 		result = EventDefinition(drivers).EditEventStatus()
 		assert status_data['status_assert'] in result
 
-	@pytest.mark.parametrize('fre_data', loadyaml('/Users/Administrator/PycharmProjects/Gaussian_CloudPlatform_UIauto/data/eventcenter.yaml', 'Frequency'))
+	@pytest.mark.parametrize('fre_data', loadyaml('/Users/gs/Desktop/GaussianUIauto/data/eventcenter.yaml', 'Frequency'))
 	def test_EditFilterFrequency(self, drivers, fre_data):
 		assert True == EventDefinition(drivers).EditEventFilterFrequency(fre_data['fre'])
 
-	@pytest.mark.parametrize('assertdata', loadyaml('/Users/Administrator/PycharmProjects/Gaussian_CloudPlatform_UIauto/data/eventcenter.yaml', 'FieldConfig'))
+	@pytest.mark.parametrize('assertdata', loadyaml('/Users/gs/Desktop/GaussianUIauto/data/eventcenter.yaml', 'FieldConfig'))
 	def test_FieldConfigPage(self, drivers, assertdata):
 		assert True == EventDefinition(drivers).FieldConfigPageView(assertdata['assertdata'])
 

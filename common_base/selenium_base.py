@@ -242,10 +242,10 @@ class selenium_base():
         except:
             print(f"根据 {value} 获取句柄失败")
 
-    def move_to_element(self, locator):
+    def move_to_element(self, locator, page_name):
         ''' 鼠标悬停操作 '''
         try:
-            ele = self.find(locator)
+            ele = self.find_elements(locator, page_name)
             ActionChains(self.driver).move_to_element(ele).perform()
         except:
             print("鼠标悬停操作失败")

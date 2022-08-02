@@ -2,9 +2,12 @@ from selenium.webdriver.common.by import By
 
 
 class event_locater:
-
+    #侧边栏
+    sidebar = (By.CSS_SELECTOR, '#root > div > section > section > div > aside')
+    #展开侧边栏
+    sidebar_botton = (By.CSS_SELECTOR, '#root > div > section > section > div > aside > div > ul > li.ant-menu-item > i > svg')
     #事件中心tab
-    eventcenter = (By.XPATH, '//*[@id="root"]/div/section/section/div/aside/div/ul/li[7]/div/span/span')
+    eventcenter = (By.XPATH, '//*[@id="root"]/div/section/section/div/aside/div/ul/li[5]/div[1]/span/span')
     #事件定义tab
     eventdefinition = (By.XPATH, '//*[@id="/event$Menu"]/li[1]')
     #事件定义页面

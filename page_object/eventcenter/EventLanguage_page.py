@@ -4,6 +4,8 @@ from selenium import webdriver
 from locator.loc_eventcenter import event_locater, event_language
 
 class EventLanguage(selenium_base):
+
+    #打开并校验语言管理页
     def LanguageTempalteOverview(self):
         self.elements_click(event_language.languageAdministration, '进入语言管理页')
         self.isElementExist(event_language.eventLanguageList)

@@ -6,6 +6,10 @@ from page_object.login_page import LoginPage
 
 class Test_EventLanguage():
 
+    @pytest.fixture(scope='session')
+    def Login(self, drivers, username='superadmin', password='123'):
+        LoginPage(drivers).login(username, password)
+
     def test_LanguageTempaltePageview(self, drivers):
         assert True == EventLanguage(drivers).LanguageTempalteOverview()
 
